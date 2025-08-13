@@ -1,0 +1,134 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px;
+  height: 100%;
+}
+
+/* Style for text, email, and textarea fields */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  /* Full width of the container */
+  max-width: 400px;
+  /* Limit max width */
+  height: 40px;
+  /* Height for inputs */
+  padding: 8px 10px;
+  /* Inner spacing */
+  font-size: 16px;
+  /* Text size */
+  border: 1px solid #ccc;
+  /* Light border */
+  border-radius: 5px;
+  /* Rounded corners */
+  outline: none;
+  border-color: #007bff;
+  box-sizing: border-box;
+  /* Prevent padding from expanding width */
+  margin-bottom: 15px;
+  /* Space below each field */
+}
+
+/* Make textarea taller */
+textarea {
+  height: 110px;
+  /* More height for messages */
+  resize: vertical;
+  /* Allow vertical resizing only */
+}
+
+/* Style for the submit button */
+button {
+  width: 150px;
+  /* Button width */
+  height: 45px;
+  /* Button height */
+  background-color: #007bff;
+  /* Blue background */
+  color: white;
+  /* White text */
+  font-size: 16px;
+  /* Text size */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+.box {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+input[type="text"],
+input[type="text"],
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: borderAnimation 3s linear infinite;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+input:focus,
+textarea:focus {
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 200% 200%;
+}
